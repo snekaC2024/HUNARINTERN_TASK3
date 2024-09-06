@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="images/netflix-logo.jpg" class="netflix-logo">
+        </div>
+        <div class="right-side">
+            <div class="language-container">
+                <i class="fas fa-globe"></i>
+                <select class="language-select">
+                    <option value="english" selected>English</option>
+                    <option value="hindi">Hindi</option>
+                </select>
+            </div>
+            <a href="signin.html" class="sign-in">Sign In</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlimited movies, TV shows and more</h1>
+            <p class="price-info">Plans start at ₹149. Cancel anytime.</p><br> <br>
+            <p class="cta-text">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="email-form">
+                <form id="email-form" action="login.html" method="get">
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit" class="cta-button">Get Started <span class="arrow">&rarr;</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Trending Section -->
+    <section class="trending-section">
+        <h2>Trending Now</h2>
+        
+        <!-- Filter Options -->
+        <div class="filter-options">
+            <div class="filter-box">
+                <select class="filter-select" id="region-select">
+                    <option value="india" selected>India</option>
+                    <option value="global">Global</option>
+                </select>
+            </div>
+            <div class="filter-box">
+                <select class="filter-select" id="type-select">
+                    <option value="movies" selected>Movies</option>
+                    <option value="tv-shows">TV Shows</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="trending-grid" id="trending-grid">
+            <!-- Movie or TV show thumbnails will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <section class="reasons-to-join">
+        <h2>More Reasons to Join</h2><br>
+        <div class="reason-container">
+            <div class="reason-box">
+                <h3>Enjoy on your TV</h3>
+                <p>Watch on your smart TV, game console, or streaming device.</p>
+                <p>Connect easily with your home entertainment system.</p>
+                <img src="images/tv-image.png" alt="TV Image" class="reason-image">
+            </div>
+            <div class="reason-box">
+                <h3>Download your shows to watch offline</h3>
+                <p>Save your favorite movies and shows on your device.</p>
+                <p>Enjoy content without needing an internet connection.</p>
+                <img src="images/download-image.png" alt="Download Image" class="reason-image">
+            </div>
+            <div class="reason-box">
+                <h3>Watch everywhere</h3>
+                <p>Stream your content on your phone, tablet, or computer.</p>
+                <p>Continue watching from where you left off, anytime, anywhere.</p>
+                <img src="images/watch-everywhere-image.png" alt="Watch Everywhere Image" class="reason-image">
+            </div>
+            <div class="reason-box">
+                <h3>Create profiles for kids</h3>
+                <p>Manage kids' viewing with separate profiles.</p>
+                <p>Ensure safe and age-appropriate content for young viewers.</p>
+                <img src="images/kids-profile-image.png" alt="Kids Profile Image" class="reason-image">
+            </div>
+        </div>
+    </section>
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is Netflix?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How much does Netflix cost?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹799 a month.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Where can I watch?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I cancel?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix is flexible. There are no contracts and no cancellation fees. You can easily cancel your account online in two clicks.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What can I watch on Netflix?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, and more. You can explore various genres and find what you love.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is Netflix good for kids?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix has a dedicated kids' experience with content suitable for kids. You can create separate profiles and set parental controls.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I watch on multiple devices?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, Netflix allows you to watch on multiple devices depending on your subscription plan, ranging from one to four simultaneous streams.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I download movies and TV shows?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, you can download select TV shows and movies to watch offline, available on the Netflix app for iOS, Android, and Windows 10.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+ 
+    <center>
+        <div class="hero-content">
+            <p class="cta-text">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="email-form">
+                <form id="email-form" action="login.html" method="get">
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit" class="cta-button">Get Started <span class="arrow">&rarr;</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </center>
+    <br>
+    <br>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-call">
+            <p>Questions? Call 000-800-040-1843</p>
+        </div>
+
+    <div class="footer-content">
+        <div class="footer-links">
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Media Centre</a></li>
+                    <li><a href="#">Ways to Watch</a></li>
+                    <li><a href="#">Cookies Preferences</a></li>
+                    <li><a href="#">Speed Test</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Only on Netflix</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="language-container">
+        <i class="fas fa-globe"></i>
+        <select class="language-select">
+            <option value="english" selected>English</option>
+            <option value="hindi">Hindi</option>
+        </select>
+    </div>
+    </footer>
+
+    <script>
+            document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+            const parent = question.parentNode;
+
+            // Toggle the active class for expanding/collapsing
+            parent.classList.toggle('active');
+            });
+           });
+    </script>
+    <script src="movie-scripts.js"></script>
+
+</body>
+</html>

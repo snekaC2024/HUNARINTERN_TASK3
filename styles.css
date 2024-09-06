@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8); /* Transparent background with dark overlay */
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+/* Netflix Logo Image */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.netflix-logo {
+    height: 45px; /* Adjust size as needed */
+    margin-left: 30px;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+}
+
+.language-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.language-container i {
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.language-select {
+    background-color: #141414;
+    color: #ffffff;
+    border: none;
+    padding: 8px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sign-in {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: 1px solid #e50914;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.sign-in:hover {
+    background-color: #e50914;
+    color: #ffffff;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: url('images/netflix-collage.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Darker overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px; /* Adjust width as needed */
+    width: 100%;
+    text-align: center;
+}
+
+.hero h1 {
+    align-items: center;
+    font-size: 2.5rem; /* Increased size for visibility */
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 1.8rem; /* Increased size for visibility */
+    color: #e50914; /* Netflix red for emphasis */
+    margin-bottom: 20px;
+}
+
+.cta-text {
+    font-size: 1rem; /* Slightly larger size */
+    margin-bottom: 40px; /* Added space */
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px; /* Space between input and button */
+}
+
+input[type="email"] {
+    flex: 1;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ffffff; /* White outline for the input field */
+    border-radius: 4px; /* Rounded corners */
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+}
+
+.cta-button {
+    background-color: #e50914; /* Netflix red */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.cta-button .arrow {
+    margin-left: 10px;
+    font-size: 1.25rem;
+}
+
+.cta-button:hover {
+    background-color: #f40612;
+}
+
+input::placeholder {
+    color: #b9b4b4;
+}
+
+/* Trending Section Styles */
+.trending-section {
+    padding: 70px;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+.trending-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Filter Options Styles */
+.filter-options {
+    display: flex;
+    gap: 20px; /* Space between the dropdowns */
+    margin-bottom: 20px; /* Space below the filter options */
+}
+
+.filter-box {
+    background-color: #afacacc7; /* Dark background for the dropdown box */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.filter-select {
+    background-color: transparent;
+    color: #020202;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    width: 150px; /* Fixed width for the dropdowns */
+}
+
+/* Trending Grid Styles */
+.trending-grid {
+    display: flex;
+    overflow-x: scroll; /* Horizontal scrolling */
+    gap: 20px;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.trending-grid::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.movie-card {
+    min-width: 150px;
+    flex: 0 0 auto;
+}
+
+.movie-card img {
+    width: 150px; /* Set the same width for all images */
+    height: 225px; /* Set the same height for all images */
+    object-fit: cover; /* Ensure the image covers the entire area without distortion */
+    border-radius: 4px; /* Optional: Add rounded corners to images */
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* reasons-to-join */
+.reasons-to-join {
+    padding: 70px;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+.reason-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between boxes */
+}
+
+.reason-box {
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    position: relative;
+    height: 250px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes the image to the bottom */
+}
+
+.reason-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.reason-box p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.reason-image {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    align-self: flex-end;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .reason-container {
+        grid-template-columns: 1fr; /* Stack boxes vertically */
+    }
+
+    .reason-box {
+        height: auto; /* Auto height on smaller screens */
+    }
+}
+
+.faq-section {
+    padding-left: 70px;
+    background-color: #141414;
+    color: white;
+    max-width: 900px;
+}
+
+.faq-container {
+    padding: 40px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.faq-question span {
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.3s ease;
+    background-color: #333;
+}
+
+.faq-answer p {
+    padding: 20px 0;
+    margin: 0;
+}
+
+.fas {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 100px; /* Adjust based on content */
+}
+
+.faq-item.active .fas {
+    transform: rotate(45deg); /* Rotate the + symbol to indicate expanded state */
+}
+
+footer {
+    padding: 40px;
+    background-color: #141414;
+    color: #7d7d7d;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-call {
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.footer-call p {
+    font-size: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    gap: 180px;
+}
+
+.footer-links-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-group li {
+    margin-bottom: 10px;
+}
+
+.footer-links-group a {
+    color: #7d7d7d;
+    text-decoration: underline;
+    font-size: 0.875rem;
+    transition: color 0.3s;
+}
+
+.footer-links-group a:hover {
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-links-group {
+        margin-bottom: 20px;
+    }
+}
+
+.signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(images/netflix-collage.jpg);
+}
+
+.signin::before {
+    content: '';
+    height: 100hv;
+    background: rgba(0, 0, 0, 0.5) transparent; /* Darker overlay */
+}
+
+.signin-content {
+    background: #000000be;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.signin h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #555;
+    color: #ffffff;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.signin-button {
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.signin-button:hover {
+    background-color: #f40612;
+}
+
+.forgot-password {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
